@@ -5,8 +5,6 @@ package com.bridgelabz;
 * Date : 28th Sep'21
 * */
 
-import java.util.ArrayList;
-
 public class AddressBook {
 
     public static void main(String[] args) {

@@ -191,13 +191,15 @@ public class Utility {
             System.out.println("0 for Add new Contact");
             System.out.println("1 for Edit Contact");
             System.out.println("3 Display all Contact");
+            System.out.println("4 Delete contact");
             System.out.println("6 for Exit");
 
             int option=userInput.nextInt();
             switch (option){
-                case 0 -> display(contactList);
-                case 1 -> contactDetails(null, contactList);
-                case 2 -> editContact();
+                case 0 -> contactDetails(null, contactList);
+                case 1 -> editContact();
+                case 2 -> display(contactList);
+                case 3 -> deletingContact(contactList);
             }
             if (option==6){
                 break;
@@ -215,5 +217,11 @@ public class Utility {
         return "ContactItems [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
                 + city + ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email
                 + "]";
+    }
+    public void deletingContact(ArrayList<Utility> contactList)
+    {
+        System.out.println("Enter the first name of the contact you wish to delete");
+        String delete = userInput.next();
+        contactList.removeIf(contact -> contact.firstName.equals(delete));
     }
 }
