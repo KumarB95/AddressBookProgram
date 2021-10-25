@@ -53,7 +53,7 @@ public class AddressBookMain {
                     addressBook.contactsCount();
                     break;
                 case 8:
-                    addressBook.sortByName();
+                    addressBook.sorting();
                     break;
                 default:
                     System.out.println("Please enter valid input");
